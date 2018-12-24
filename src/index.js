@@ -1,7 +1,12 @@
+//////////////
+// Requires //
+//////////////
+
 const methodOverride = require('method-override');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const express = require('express');
+const session = require('express-session');
 const app = express();
 
 //////////////
@@ -24,14 +29,34 @@ app.set('view engine', '.hbs')
 /////////////////
 
 app.use(express.urlencoded( {extended: false} ));
+app.use(methodOverride('_method')); // Permitiendo el uso de method-override
+// Activando y configurando las sesiones de express
+app.use(session({
+    secret: 'palabrasecreta',
+    resave: true,
+    saveUninitialized: true
+}));
 
-// Global Variables
+//////////////////////
+// Global Variables // 
+//////////////////////
 
-// Routes
+////////////
+// Routes //
+////////////
 
-// Static files
+app.use(require('./routes/index'));
+app.use(require('./routes/users'));
+app.use(require('./routes/notes'));
 
-// Server is listening
+//////////////////
+// Static files //
+//////////////////
+
+/////////////////////////
+// Server is listening //
+/////////////////////////
+
 app.listen(app.get('port'), () => {
     console.log(`Servidor corriendo en el puerto ${app.get('port')}`);
 });
