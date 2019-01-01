@@ -13,6 +13,12 @@ const app = express();
 // Settings //
 //////////////
 
+require('./database');
+
+//////////////
+// Settings //
+//////////////
+
 app.set( 'port', process.env.port || 3000 ); // Configura el puesto en el que escuchará la aplicación
 app.set( 'views', path.join( __dirname, '/views' ) ); // Configura la dirección de las plantillas html
 // Configurando motor de plantillas handlebars
@@ -52,6 +58,8 @@ app.use(require('./routes/notes'));
 //////////////////
 // Static files //
 //////////////////
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 /////////////////////////
 // Server is listening //
