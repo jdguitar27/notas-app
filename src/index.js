@@ -19,14 +19,14 @@ require('./database');
 // Settings //
 //////////////
 
-app.set( 'port', process.env.port || 3000 ); // Configura el puesto en el que escuchará la aplicación
+app.set( 'port', process.env.port || 3000 ); // Configura el puerto en el que escuchará la aplicación
 app.set( 'views', path.join( __dirname, '/views' ) ); // Configura la dirección de las plantillas html
 // Configurando motor de plantillas handlebars
 app.engine('.hbs', exphbs({
-    defaultLayout: 'main',
-    layoutsDir: path.join( app.get( 'views' ), 'layouts' ),
-    partialsDir: path.join( app.get( 'views' ), 'partials' ),
-    extname: '.hbs'
+    defaultLayout:  'main',
+    layoutsDir:     path.join( app.get( 'views' ), 'layouts' ),
+    partialsDir:    path.join( app.get( 'views' ), 'partials' ),
+    extname:        '.hbs'
 }));
 app.set('view engine', '.hbs')
 

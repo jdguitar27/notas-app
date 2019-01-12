@@ -1,0 +1,37 @@
+/* ------------------- */
+/* Estilos del header  */
+/* ------------------- */
+.bg-dark-blue{ background-color: #1a3653 !important;}
+
+.navbar-dark .navbar-nav .nav-link
+{
+    color: white;
+    transition: border-color .3s;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px; 
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .nav-link:focus
+{
+    border-color: white;
+    color: white;
+}
+
+
+.zoom {transition: transform .5s;}
+
+.zoom:hover 
+{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* ------------------- */
+/*        body         */
+/* ------------------- */
+body
+{
+    background-color: #11a3bd;
+}

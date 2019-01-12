@@ -1,11 +1,11 @@
 const router = require('express').Router();
 
 router.get('/users/singin', (req, res) => {
-    res.send('<h1>Ingresando a la aplicación</h1>');
+    res.render('users/signin');
 });
 
-router.get('/users/singup', (req, res) => {
-    res.send('<h1>Resgistrándose a la aplicación</h1>');
+router.get('/users/signup', (req, res) => {
+    res.render('users/signup');
 });
 
 module.exports = router;
