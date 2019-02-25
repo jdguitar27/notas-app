@@ -34,4 +34,5 @@
 body
 {
     background-color: #11a3bd;
+    min-height: 100%;
 }

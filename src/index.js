@@ -15,10 +15,6 @@ const app = express();
 
 require('./database');
 
-//////////////
-// Settings //
-//////////////
-
 app.set( 'port', process.env.port || 3000 ); // Configura el puerto en el que escuchará la aplicación
 app.set( 'views', path.join( __dirname, '/views' ) ); // Configura la dirección de las plantillas html
 // Configurando motor de plantillas handlebars
