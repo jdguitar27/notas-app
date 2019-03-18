@@ -4,7 +4,6 @@
 html, body
 {
     min-width: 100vh !important;
-    min-height: 100vh !important;
 }
 
 .bg-dark-blue{ background-color: #1a3653 !important;}

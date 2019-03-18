@@ -7,6 +7,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
+const flash = require('connect-flash');
 const bodyParser = require('body-parser');
 const app = express();
 
@@ -39,11 +40,16 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+app.use(flash());
 
 //////////////////////
 // Global Variables // 
 //////////////////////
-
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    next();
+});
 ////////////
 // Routes //
 ////////////
