@@ -7,6 +7,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
+const bodyParser = require('body-parser');
 const app = express();
 
 //////////////
@@ -47,9 +48,11 @@ app.use(session({
 // Routes //
 ////////////
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(require('./routes/index'));
-app.use(require('./routes/users'));
-app.use(require('./routes/notes'));
+app.use('/users', require('./routes/users'));
+app.use('/notes', require('./routes/notes'));
 
 //////////////////
 // Static files //

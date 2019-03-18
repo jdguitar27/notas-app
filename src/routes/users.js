@@ -1,10 +1,10 @@
 const router = require('express').Router();
 
-router.get('/users/singin', (req, res) => {
+router.get('/singin', (req, res) => {
     res.render('users/signin');
 });
 
-router.get('/users/signup', (req, res) => {
+router.get('/signup', (req, res) => {
     res.render('users/signup');
 });
 

@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
-var Note = require('./Note');
+var Note = require('../Note');
 
 // CREATES A NEW Note
 router.post('/', async (req, res) => {
