@@ -1,0 +1,5 @@
+<div id="notification-bar" style="right: 5%; top: 16%; z-index: 100;" class="position-fixed w-25">
+    {{#each notifications}}
+        {{> notification color=type text=message }}
+    {{/each}}
+</div>

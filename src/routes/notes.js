@@ -17,17 +17,17 @@ router.get('/', async (req, res) => {
 // Crea una nueva nota en la base de datos
 router.post('/', async (req, res) => {
     const { title, description } = req.body;
-    const errors = [];
+    const notifications = [];
 
     if(!title || title.trim() === "")
-        errors.push({message: 'Please write a title'});
+        notifications.push({message: 'Please write a title', type: 'danger'});
         
     if(!description || description.trim() === "")
-        errors.push({message: 'Please write a description'});
+        notifications.push({message: 'Please write a description', type: 'danger'});
     
-    if(errors.length > 0)
+    if(notifications.length > 0)  
         res.render('notes/new-note', {
-            errors,
+            notifications,
             title,
             description
         });
@@ -39,7 +39,8 @@ router.post('/', async (req, res) => {
                     title ,
                     description
                 });
-            req.flash('success_msg', 'Note created successfuly!');
+            notifications.push({message: 'Note created successfully!', type: 'info'});
+            req.flash('notifications', notifications);
             res.redirect('/notes');
         }
         catch (err) 
@@ -53,40 +54,41 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {        
-    try
+    const { title, description } = req.body;
+    const notifications = [];
+    
+    if(!title || title.trim() === "")
+        notifications.push({message: 'The title can\'t be empty', type: 'danger'});
+        
+    if(!description || description.trim() === "")
+        notifications.push({message: 'The description can\'t be empty', type: 'danger'});
+    
+    if(notifications.length > 0)
+        res.render('notes/edit-note', {
+            notifications,
+            note: {
+                _id: req.params.id,
+                title,
+                description
+            }
+        });
+    else
     {
-        const { title, description } = req.body;
-        const errors = [];
-        
-        if(!title || title.trim() === "")
-            errors.push({message: 'The title can\'t be empty'});
-            
-        if(!description || description.trim() === "")
-            errors.push({message: 'The description can\'t be empty'});
-        
-        if(errors.length > 0)
-            res.render('notes/edit-note', {
-                errors,
-                note: {
-                    _id: req.params.id,
-                    title,
-                    description
-                }
-            });
-        else
+        try
         {
             const note = await Note.findByIdAndUpdate(req.params.id, { title, description});
-            req.flash('success_msg', 'Note updated successfuly!');
+            notifications.push({ message: 'Note updated successfully!', type: 'success' });
+            req.flash('notifications', notifications);
             res.redirect('/notes');
-        }    
-    }    
-    catch (err) 
-    {
-        res.status(500).send({
-            mensaje:'Hubo un problema al intentar cargar la información en la base de datos',
-            error: err.message
-        });
-    }
+        }
+        catch (err) 
+        {
+            res.status(500).send({
+                mensaje:'Hubo un problema al intentar cargar la información en la base de datos',
+                error: err.message
+            });
+        }
+    }        
 });
 
 // Renderiza el formmulario de creación de notas
