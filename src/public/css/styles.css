@@ -1,6 +1,30 @@
 /* ------------------- */
 /* Estilos del header  */
 /* ------------------- */
+:root
+{
+    --color-1: #0e1621;
+    --color-2: #1f2936;
+    --color-3: #363c42;
+    --color-4: #2b5278;
+    --color-5: #4b88bb;
+    --color-6: #566178;
+}
+
+.bg-color-1 { background-color: var(--color-1) !important; }
+.bg-color-2 { background-color: var(--color-2) !important; }
+.bg-color-3 { background-color: var(--color-3) !important; }
+.bg-color-4 { background-color: var(--color-4) !important; }
+.bg-color-5 { background-color: var(--color-5) !important; }
+.bg-color-6 { background-color: var(--color-6) !important; }
+
+.color-1 { color: var(--color-1) !important; }
+.color-2 { color: var(--color-2) !important; }
+.color-3 { color: var(--color-3) !important; }
+.color-4 { color: var(--color-4) !important; }
+.color-5 { color: var(--color-5) !important; }
+.color-6 { color: var(--color-6) !important; }
+
 html, body
 {
     min-height: 100vh !important;
@@ -27,7 +51,29 @@ html, body
 /* ------------------- */
 /*        body         */
 /* ------------------- */
-body
+
+.custom-icon
 {
-    background-color: #11a3bd;
+    width: 40px !important;
+    cursor: pointer;
+}
+
+.custom-icon , .color-4 > div:hover
+{
+    opacity: .7 !important;
+    color: white;
+}
+
+.circle-add
+{
+    border-radius: 50%;
+    right: 30px;
+    bottom: 30px;
+    transition: opacity .3s;
+    box-shadow: 9px 6px 15px black;
+}
+
+.circle-add:hover
+{
+    opacity: .7;
 }

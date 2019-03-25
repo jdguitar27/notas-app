@@ -1,13 +1,16 @@
 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mt-5">
-    <div class="card text-dark">
-        <div class="card-header text-center">
-            <h3>{{title}}</h3>
+    <div class="card text-light bg-color-5">
+        <div class="text-right pt-2 pr-2">
+            <a class="custom-icon color-4" href="/notes/edit/{{id}}">
+                <div data-icon="ei-pencil" data-size="m"></div>
+            </a>
+            <a class="custom-icon color-4" href="">
+                <div  data-icon="ei-close" data-size="m"></div>
+            </a>
         </div>
         <div class="card-body">
-            {{!-- <h4 class="card-title">{{title}}</h4> --}}
+            <h4 class="card-title">{{title}}</h4>
             <p>{{description}}</p>
-            <a href="/notes/edit/{{id}}" class="btn btn-primary btn-block">Edit</a>
-            <buttom class="btn btn-danger btn-block">Delete</buttom>
         </div>
     </div>
 </div>

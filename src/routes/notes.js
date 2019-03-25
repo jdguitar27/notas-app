@@ -97,7 +97,7 @@ router.get('/add', (req, res) => {
 // Renderiza el formulario de edición de una nota
 router.get('/edit/:id', async (req, res) => {
     const note = await Note.findById(req.params.id);
-    res.render('notes/edit-note', {note}); 
+    res.render('notes/edit-note', {note});
 });
 
 module.exports = router;

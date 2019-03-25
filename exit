@@ -1,0 +1,71 @@
+[33mcommit b402e3fcc9901dba9e5453b727fb1e8baacd7dcf[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: José <jose27duran08@gmail.com>
+Date:   Mon Mar 18 01:02:13 2019 -0430
+
+    ajuste de template nota
+
+[33mcommit dc2668bf6ea213575082c9c0d6fda5be76cc3a3f[m
+Author: José <jose27duran08@gmail.com>
+Date:   Mon Mar 18 00:58:55 2019 -0430
+
+    Ajuste de navbar responsive
+
+[33mcommit 65c52330add082d5cd57d69dbf8aaa6f46fda9ca[m
+Author: José <jose27duran08@gmail.com>
+Date:   Mon Mar 18 00:07:50 2019 -0430
+
+    crud de notas y configuración de flash
+
+[33mcommit 7ce987a24ad30859f4ebe7d992fe51cff0ec8752[m
+Author: José <jose27duran08@gmail.com>
+Date:   Sun Mar 17 20:15:12 2019 -0430
+
+    Agregado de manejo de rutas y nuevos templates
+
+[33mcommit d3de3da26c2df9fa7792c7490689e314b7119724[m
+Author: José <jose27duran08@gmail.com>
+Date:   Mon Feb 25 18:21:54 2019 -0430
+
+    agregado de modelos y rutas
+
+[33mcommit 0ab76e0fa09e284cd079df02fe75921a06f0af7d[m
+Author: José <jose27duran08@gmail.com>
+Date:   Sat Jan 12 18:24:27 2019 -0430
+
+    continuación de tutorial y modificación de plantillas y vistas
+
+[33mcommit 007f3c5ae155e30bdf6f3d3dee9dacc733c826f5[m
+Author: José <jose27duran08@gmail.com>
+Date:   Tue Jan 1 18:12:31 2019 -0430
+
+    Creación de rutas y conexion a la base de datos
+
+[33mcommit 722d5ffaa33fed2ab07adea541e73bd35fdf8da6[m
+Author: José <jose27duran08@gmail.com>
+Date:   Mon Dec 24 18:43:02 2018 -0430
+
+    Configuración de rutas
+
+[33mcommit 1f5f1d76fa585d876eda6a5f8352e64274ad783a[m
+Author: José <jose27duran08@gmail.com>
+Date:   Mon Dec 24 18:23:57 2018 -0430
+
+    Agregado de de archivos de rutas
+
+[33mcommit 35b715fa52cb9a9c1b359bed4d46fa0bd4660499[m
+Author: José <jose27duran08@gmail.com>
+Date:   Mon Dec 24 17:43:30 2018 -0430
+
+    Configuración de motor de vistas 'express-handlebars'
+
+[33mcommit ae04b701faab63abb58900cc806181f7ae3c0314[m
+Author: José <jose27duran08@gmail.com>
+Date:   Mon Dec 24 01:18:00 2018 -0430
+
+    Agregado del archivo .gitignore
+
+[33mcommit 3c8b90fe9669d05d51f622bcbee7ec9fa3419719[m
+Author: José <jose27duran08@gmail.com>
+Date:   Mon Dec 24 00:55:24 2018 -0430
+
+    Inicio y creación del proyecto
